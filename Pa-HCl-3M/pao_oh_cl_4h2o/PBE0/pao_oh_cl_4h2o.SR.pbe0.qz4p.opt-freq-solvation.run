@@ -1,0 +1,82 @@
+#!/bin/sh
+
+"$AMSBIN/ams" << eor
+
+Task GeometryOptimization
+EngineRestart ${SCM_ROOT}/home/shaaban/ams/PhD/geometries-exafs/pao_oh_cl_4h2o/PBE0/pao_oh_cl_4h2o.SR.pbe0.tz2p.opt-freq-solvation.results/adf.rkf
+Properties
+    NormalModes Yes
+End
+GeometryOptimization
+    Convergence
+        Energy 1e-06
+        Gradients 0.0001
+        Step 0.001
+    End
+    MaxRestarts 1
+End
+System
+    Atoms
+        Pa -0.2967146996452414 -0.2388119953292685 0.4956101042056157 adf.R=2.200
+        O 1.700466242966839 1.166247761416009 1.052839548293612 adf.R=1.517
+        O -0.4858117353404288 0.721254887539406 -1.276616553944244 adf.R=1.517
+        Cl -1.208685293247473 1.856719639013313 1.911665057488766 adf.R=1.725
+        H -0.7283036125278448 1.499473052384387 -1.791883606054025 adf.R=1.350
+        O -1.080262552419817 -2.272122339661582 -0.7084054407654421 adf.R=1.517
+        H -1.253868724598027 -2.336112726717904 -1.65386661584699 adf.R=1.350
+        H -0.9594869128335604 -3.1708412089042 -0.3834145877175757 adf.R=1.350
+        H 1.640980199547668 1.815515509745836 1.762215087186434 adf.R=1.350
+        O -0.02914849769519673 -1.338443804654868 1.923572073778636 adf.R=1.517
+        O 1.795698499511299 -1.217061907647341 -0.4273946572883639 adf.R=1.517
+        H 2.118890607247428 -1.114893514267726 -1.329185709901297 adf.R=1.350
+        H 2.220384344295926 -2.001730773110703 -0.06426107361491397 adf.R=1.350
+        O -2.788233039163524 -0.4951977678663633 0.6227168804585951 adf.R=1.517
+        H -3.21656654495046 -1.350215287170814 0.5063184945407631 adf.R=1.350
+        H -3.286291107894608 -0.01029104480708857 1.289797526329955 adf.R=1.350
+        H 2.591110715693905 0.7994956528264737 1.069534262923276 adf.R=1.350
+    End
+    Charge 1.0
+    BondOrders
+         1 2 1.0
+         1 3 1.0
+         1 4 1.0
+         1 6 1.0
+         1 10 1.0
+         1 11 1.0
+         1 14 1.0
+         2 9 1.0
+         2 17 1.0
+         3 5 1.0
+         6 7 1.0
+         6 8 1.0
+         11 12 1.0
+         11 13 1.0
+         14 15 1.0
+         14 16 1.0
+    End
+End
+
+Engine ADF
+    Basis
+        Type QZ4P
+        Core None
+    End
+    XC
+        Hybrid PBE0
+    End
+    Solvation
+        Surf Delley
+        Solv name=Water cav0=0.0 cav1=0.0067639
+        Charged method=CONJ
+        C-Mat POT
+        SCF VAR ALL 
+        CSMRSP
+    End
+    NumericalQuality Good
+    MBPT
+        SigmaFunctionalParametrization W1
+    End
+EndEngine
+eor
+
+# dependency: /home/shaaban/ams/PhD/geometries-exafs/pao_oh_cl_4h2o/PBE0/pao_oh_cl_4h2o.SR.pbe0.tz2p.opt-freq-solvation -
