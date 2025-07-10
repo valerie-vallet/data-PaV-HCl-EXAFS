@@ -1,0 +1,68 @@
+#!/bin/sh
+
+"$AMSBIN/ams" << eor
+
+Task GeometryOptimization
+Properties
+    NormalModes Yes
+End
+GeometryOptimization
+    Convergence
+        Energy 1e-06
+        Gradients 0.0001
+        Step 0.001
+    End
+End
+System
+    Atoms
+        Pa -0.8067253718473291 -1.161718639417038 0.2763308837377823 adf.R=2.200
+        Cl 0.265524692591042 1.207313325952248 0.9873716218842327 adf.R=1.725
+        Cl -1.531729777206713 -3.573510337097028 -0.577562477898048 adf.R=1.725
+        O 3.165868251315983 -0.07879903478762168 0.1964306899170232 adf.R=1.517
+        Cl -3.15191736753449 -0.06756801463332907 -0.274745385896465 adf.R=1.725
+        Cl 0.06722771772295301 -0.6626909971283735 -2.149019810552906 adf.R=1.725
+        O -1.212233880300258 -1.595923503411706 2.034495941516436 adf.R=1.517
+        H 2.215638012182029 -1.331137993923885 0.4535824053517598 adf.R=1.350
+        O 1.468796122436453 -2.002491456795195 0.6461115644805118 adf.R=1.517
+        H 1.683994840985052 -2.437427085249433 1.49073660395256 adf.R=1.350
+        H 2.517487320648025 0.650406538288141 0.3063646314434872 adf.R=1.350
+        H 3.470321029938607 -0.01315719736523019 -0.7267360040123693 adf.R=1.350
+    End
+    Charge -1.0
+    BondOrders
+         1 2 1.0
+         1 3 1.0
+         1 5 1.0
+         1 6 1.0
+         1 7 1.0
+         1 9 1.0
+         4 11 1.0
+         4 12 1.0
+         9 8 1.0
+         9 10 1.0
+    End
+End
+
+Engine ADF
+    Basis
+        Type TZ2P
+        Core None
+    End
+    XC
+        Hybrid PBE0
+    End
+    Solvation
+        Surf Delley
+        Solv name=Water cav0=0.0 cav1=0.0067639
+        Charged method=CONJ
+        C-Mat POT
+        SCF VAR ALL 
+        CSMRSP
+    End
+    NumericalQuality Good
+    MBPT
+        SigmaFunctionalParametrization W1
+    End
+EndEngine
+eor
+

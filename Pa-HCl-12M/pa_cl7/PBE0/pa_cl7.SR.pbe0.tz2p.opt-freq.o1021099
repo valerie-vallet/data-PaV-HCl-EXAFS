@@ -1,0 +1,75 @@
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
++-----------------------------------------------------------------------------------+
+| Welcome to sakura:                                                                |
+|                                                                                   |
+| For questions on sakura HPC cluster, email phlam-sakura@univ-lille.fr             |
+|                                                                                   |
+| Documentation accessible on the WIKI page:                                        |
+| ------------------------------------------                                        |
+| https://wikis.univ-lille.fr/phlam-hpc/                                            |
+|                                                                                   |
+| New commands to check the status of the cluster:                                  |
+| ------------------------------------------------                                  |
+| cnodes           : to list the status of all nodes                                |
+| cnodes -f        : to check for free nodes                                        |
+| checkjob <jobid> : to check the status of your job (especially when not running ! |
+| showstart <jobid>: to check when your job is expected to start when not running ! |
+| cdjob <jobid>    : to move to the <jobid> directory                               |
+| cdtmp <jobid>    : to move to the <jobid> working directory on node               |
+| rmtmp <jobid>    : removing the <jobid> working directory on node                 |
+|                                                                                   |
++-----------------------------------------------------------------------------------+
+
+	------------------------------------------------
+	Loading the ams ams2023.104 software
+	------------------------------------------------
+
+	------------------------------------------------
+	Loading the gcc 4.9.3 software
+	------------------------------------------------
+
+	------------------------------------------------
+	Loading the ams ams2023.104 software
+	------------------------------------------------
+
+	------------------------------------------------
+	Loading the gcc 9.4.0 software
+	------------------------------------------------
+
+/share/apps/gcc/4.9.3/lib64:/share/apps/gcc/4.9.3/lib:/opt/openmpi/lib:/opt/python/lib
+Nb of jobs already running = 1
+-------------------------------
+Status of the TMPDIR partition:
+-------------------------------
+/state/partition2: 1% used [Available 8.6T / 8.6T]
+
+-------------
+Define TMPDIR
+-------------
+Set TMPDIR to /state/partition2/shaaban/1021099.phlam-s-sakura
+Create TMPDIR
+#--- Job started at Fri Jun 21 13:55:00 CEST 2024
+#--- Running in parallel with  processors
+#--- on nodes: 
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+u-0-5
+NORMAL TERMINATION
+#--- Job ended at Fri Jun 21 18:33:39 CEST 2024
