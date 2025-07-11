@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : DefaultInpx.xml
+    Created on : 8. September 2017, 10:25
+    Author     : COSMOthermX
+    Description:
+        Default structure of inpx file for normal use 
+    Optional parameter:
+      <globalArea>
+	<comment/>
+      </globalArea>
+      <compoundList parametrization="" conformer="">
+      	<conformer>
+            <conformerName></conformerName>
+            <conformerAltName/>
+            <compound>
+               <compoundAltName/>
+	       <filename></filename>
+	       <filepath></filepath>
+	       <compOptions/>
+	       <confOptions/>
+	       <compProperties/>
+	    </compound>
+	    <compOptions/>
+	    <confOptions/>
+	    <compProperties/>
+	</conformer>
+	<compound>
+            <compoundAltName/>
+	    <filename></filename>
+       	    <filepath></filepath>
+	    <compOptions/>
+	    <confOptions/>
+	    <compProperties/>
+	</compound>
+      </compoundList>
+    Single calcJob:
+      <jobList>
+	<calcJob>
+	    <jobString></jobString>
+	    <comment></comment>
+	</calcJob>
+     </jobList>
+-->
+<defaultCalcJobFile>
+    <globalArea>
+	<comment/>
+	<line0>ctd = BP_TZVP_25.ctd cdir = "/home/pcmt/COSMOlogic/COSMOtherm2025/COSMOthermX/../COSMOtherm/CTDATA-FILES" ldir = "/home/pcmt/COSMOlogic/COSMOtherm2025/COSMOthermX/../licensefiles"          
+</line0>
+	<line1>notempty wtln ehfile          
+</line1>
+	<line2/>
+    </globalArea>
+    <compoundList conformer="yes" parametrization="TZVP">
+    <fraction/>
+      <compound>
+         <compoundAltName/>
+         <filename>h2o_c0.cosmo</filename>
+         <filepath>../COSMOtherm/DATABASE-COSMO/BP-TZVP-COSMO/h</filepath>
+         <compoundComment/>
+         <compOptions>
+            <contentIntern>0</contentIntern>
+            <useVap>1</useVap>
+         </compOptions>
+      </compound>
+      <compound>
+         <compoundAltName/>
+         <filename>pao_oh_cl_4h2o-bp86-cosmors-deftzvp-klamt.cosmo</filename>
+         <filepath>/home/shaaban/Gaussian/cosmors/exafs-geom/pao_oh_cl_4h2o/oh-trans</filepath>
+         <compoundComment/>
+         <compOptions>
+            <contentIntern>0</contentIntern>
+            <useVap>1</useVap>
+         </compOptions>
+      </compound>
+      <compound>
+         <compoundAltName/>
+         <filename>pao_oh_cl2_3h2o-bp86-cosmors-deftzvp-klamt.cosmo</filename>
+         <filepath>/home/shaaban/Gaussian/cosmors/exafs-geom/pao_oh_cl2_3h2o</filepath>
+         <compoundComment/>
+         <compOptions>
+            <contentIntern>0</contentIntern>
+            <useVap>1</useVap>
+         </compOptions>
+      </compound>
+      <compound>
+         <compoundAltName/>
+         <filename>pao_cl3_cltrans_2h2o-bp86-cosmors-deftzvp-klamt.cosmo</filename>
+         <filepath>/home/shaaban/Gaussian/cosmors/exafs-geom/pao_cl4_2h2o/pao_cl3_cltrans_2h2o</filepath>
+         <compoundComment/>
+         <compOptions>
+            <contentIntern>0</contentIntern>
+            <useVap>1</useVap>
+         </compOptions>
+      </compound>
+      <compound>
+         <compoundAltName/>
+         <filename>pao_cl5_h2o-bp86-cosmors-deftzvp-klamt.cosmo</filename>
+         <filepath>/home/shaaban/Gaussian/cosmors/exafs-geom/pao_cl5_h2o</filepath>
+         <compoundComment/>
+         <compOptions>
+            <contentIntern>0</contentIntern>
+            <useVap>1</useVap>
+         </compOptions>
+      </compound>
+      <compound>
+         <compoundAltName/>
+         <filename>pao_oh_cl-trans_4h2o-bp86-cosmors-deftzvp-klamt.cosmo</filename>
+         <filepath>/home/shaaban/Gaussian/cosmors/exafs-geom/pao_oh_cl_4h2o/cl-trans</filepath>
+         <compoundComment/>
+         <compOptions>
+            <contentIntern>0</contentIntern>
+            <useVap>1</useVap>
+         </compOptions>
+      </compound>
+      <compound>
+         <compoundAltName/>
+         <filename>pao_oh_cl_4h2o-trans-bp86-cosmors-deftzvp-klamt.cosmo</filename>
+         <filepath>/home/shaaban/Gaussian/cosmors/exafs-geom/pao_oh_cl_4h2o/h2o-trans</filepath>
+         <compoundComment/>
+         <compOptions>
+            <contentIntern>0</contentIntern>
+            <useVap>1</useVap>
+         </compOptions>
+      </compound>
+   </compoundList>
+    <specialCompoundList conformer="yes" parametrization="TZVP">
+    </specialCompoundList>
+    <jobList>
+    <calcJob>
+         <jobString>henry= 1 tk=298.15 GSOLV=reference</jobString>
+         <comment> # Automatic Henry Law coefficient Calculation</comment>
+      </calcJob>
+   </jobList>
+</defaultCalcJobFile>

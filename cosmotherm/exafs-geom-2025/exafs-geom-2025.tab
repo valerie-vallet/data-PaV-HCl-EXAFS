@@ -1,0 +1,14 @@
+
+ Property  job 1 : Henry law coefficients H ;
+ Settings  job 1 : T= 298.15 K ; x(1)= 1.0000 ;
+ Units     job 1 : Energies in kcal/mol ; Pressure in mbar ; Henry constant in bar ; Concentrations x : mole fraction ;
+ General   job 1 : Free energy of solvation in reference (1 bar gas / 1 mol solvent) frame ; Solvent density = 996.683 g/l ;
+ 
+  Nr Compound                                                         H         ln(gamma)              pv             Gsolv             pvExp            HpvExp            GpvExp
+   1 h2o                                                     0.03660249        0.00000000     36.60249404       -1.95972562       31.76758052        0.03176758       -2.04366299
+   2 pao_oh_cl_4h2o-bp86-cosmors-deftzvp-klamt               1.3790E-56      -35.17332729      2.6010E-38      -76.20741558                NA                NA                NA
+   3 pao_oh_cl2_3h2o-bp86-cosmors-deftzvp-klamt              1.1613E-25       -7.45796863      2.0133E-19      -34.01754223                NA                NA                NA
+   4 pao_cl3_cltrans_2h2o-bp86-cosmors-deftzvp-klamt                 NA                NA              NA      -71.72900111                NA                NA                NA
+   5 pao_cl5_h2o-bp86-cosmors-deftzvp-klamt                          NA                NA              NA     -190.78497527                NA                NA                NA
+   6 pao_oh_cl-trans_4h2o-bp86-cosmors-deftzvp-klamt         5.2135E-55      -33.11603461      1.2567E-37      -74.05522407                NA                NA                NA
+   7 pao_oh_cl_4h2o-trans-bp86-cosmors-deftzvp-klamt         4.7378E-53      -35.01940772      7.6615E-35      -71.38341463                NA                NA                NA
